@@ -227,8 +227,35 @@ html, body{
     padding-bottom: .5rem;
     text-align: center;
 }
+/* ABOUT SECTION STYLE */
+.content__about{
+    background: var(--color-white);
+    padding: 4rem 16px 20px;
+}
+.about__image{
+    width: 100%;
+    box-shadow: 0 0 4px 4px rgb(0, 0, 0, .25);
+}
+.about__info-wrapper{
+    /* border: solid 2px black; */
+    margin-top: 20px;
+    text-align: center;
+}
+.about__info-heading{
+    color: var(--color-orange);
+    font-size: 2rem;
+    text-shadow: 0 4px 4px rgb(0, 0, 0, .25);
+    margin-bottom: 1rem;
+}
+.about__info-text{
+    color: var(--color-gray);
+    font-size: 1.25rem;
+    line-height: 1.75;
+    text-align: justify;
+    text-shadow: 0 4px 4px rgb(0, 0, 0, .25);
+}
 
-/* MODIFIER */
+/* MODIFIERS */
 .active{
     color: var(--color-orange);
 }
