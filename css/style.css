@@ -234,6 +234,7 @@ html, body{
 }
 .about__image{
     width: 100%;
+    min-height: 220px;
     box-shadow: 0 0 4px 4px rgb(0, 0, 0, .25);
 }
 .about__info-wrapper{
@@ -253,6 +254,41 @@ html, body{
     line-height: 1.75;
     text-align: justify;
     text-shadow: 0 4px 4px rgb(0, 0, 0, .25);
+}
+/* PROGRAM SECTION STYLE */
+.content__program{
+    /* border: solid 2px black; */
+    background: var(--color-white);
+    padding-top: 4rem;
+}
+.program__info-heading{
+    font-size: 2rem;
+    color: var(--color-gray);
+    text-align: center;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 4px 4px rgb(0, 0, 0, .25);
+}
+.program__info-list{
+    background: var(--color-orange);
+    padding: 1rem;
+    line-height: 1.25;
+}
+.program__info-course{
+    list-style: disc;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin: 0 0 1.25rem 1.5rem;
+}
+.program__info-course:last-child{
+    margin-bottom: 0;
+}
+.program__image-container{
+    padding: 32px 16px 20px;
+}
+.program__image{
+    width: 100%;
+    min-height: 220px;
+    box-shadow: 0 0 4px 4px rgb(0, 0, 0, .25);
 }
 
 /* MODIFIERS */
