@@ -170,20 +170,19 @@ html, body{
     height: 100%;
     background: var(--color-white);
 }
-/* HEADER */
+/* HEADER STYLE*/
 .site__navbar{
     position: fixed;
     width: 100%;
-    max-width: 1170px;
     background: rgba(77, 77, 77, 1); 
+    z-index: 1;
 }
 .site__navbar-menu{
-    /* max-width: 1170px; */
+    max-width: 1170px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 4rem;
-    /* background: rgba(77, 77, 77, 1);  */
 }
 .navbar__menu-logo{
     font-size: 40px;
@@ -199,7 +198,7 @@ html, body{
 .navbar__menu-link:hover{
     color: var(--color-orange);
 }
-/* FORM SECTION */
+/* HERO SECTION STYLE */
 .content__hero{
     background-image:
         linear-gradient(rgba(0, 0, 0 , .6), rgba(0, 0, 0 , .6)),
@@ -239,7 +238,6 @@ html, body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: solid 1px black; */
 }
 /* FORMKIT FORM STYLE */
 .formkit-fields{
@@ -286,8 +284,10 @@ html, body{
     margin-bottom: 1.25rem;
     text-shadow: 0 4px 4px rgb(0, 0, 0, .25);
 }
-.program__info-list{
+.program__info-container{
     background: var(--color-orange);
+}
+.program__info-list{
     padding: 1rem;
     line-height: 1.25;
 }
@@ -338,6 +338,135 @@ html, body{
     color: var(--color-orange);
 }
 /* RESPONSIVE LAYOUT */
+/* DESKTOP */
+@media screen and (min-width: 1023px){
+    /* HEADER STYLE */
+    .site__navbar-menu{
+        margin: 0 auto;
+        /* z-index: -1; */
+    }
+    .navbar__menu-logo{
+        display: inline-block;
+        flex-grow: 1;
+        margin-left: 16px;
+    }
+    .navbar__menu-link{
+        margin-right: 20px;
+    }
+    .navbar__menu-link:last-child{
+        margin-right: 16px;
+    }
+    /* HERO SECTION STYLE */
+    .content__hero{
+        background-image:
+            linear-gradient(to right, rgba(0, 0, 0 , .6), rgba(0, 0, 0 , 0)),
+            url(/images/simon-kadula-8gr6bObQLOI-unsplash.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content__hero-container{
+        width: 100%;
+        max-width: 1170px;
+    }
+    .hero__headline{
+        display: none;
+    }
+    .hero__supporting-headline{
+        text-align: start;
+        font-size: 4rem;
+        max-width: 694px;
+    }
+    .hero__form-title{
+        text-align: start;
+        font-size: 2rem;
+        max-width: 694px;
+    }
+    .hero__form-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .formkit-fields{
+        width: 337px;
+    }
+    /* ABOUT SECTION STYLE */
+    .content__about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content__about-container{
+        width: 100%;
+        max-width: 1170px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .about__image{
+        width: 100%;
+        max-width: 575px;
+        max-height: 420px;
+    }
+    .about__info-wrapper{
+        width: 100%;
+        max-width: 468px;
+        padding: 0 20px;
+    }
+    .about__info-heading{
+        text-align: start;
+        font-size: 3rem;
+    }
+    .about__info-text{
+        font-size: 1.5rem;
+    }
+    /* PROGRAM SECTION STYLE */
+    .content__program{
+        padding-bottom: 95px;
+    }
+    .program__info-heading-container{
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    .program__info-heading{
+        text-align: start;
+        font-size: 3rem;
+    }
+    .program__info-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .program__info-list{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 1170px;
+    }
+    .program__info-list--col-1,
+    .program__info-list--col-2{
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .program__image-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0, -50%);
+    }
+    .program__image{
+        width: 100%;
+        max-width: 575px;
+        height: 420px;
+    }
+}
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px){
     /* HEADER STYLE */
