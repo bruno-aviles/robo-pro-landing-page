@@ -194,6 +194,7 @@ html, body{
     text-decoration: none;
     font-size: 1.25rem;
     color: var(--color-white);
+    transition: .5s ease-in-out;
 }
 .navbar__menu-link:hover{
     color: var(--color-orange);
@@ -329,10 +330,19 @@ html, body{
     border-radius: 5px;
     color: var(--color-white);
     background-color: var(--color-orange);
+    transition: .25s ease-in-out;
+}
+.footer__sign-up-button:hover{
+    font-size: 1.5rem;
 }
 /* MODIFIERS */
 .active{
     color: var(--color-orange);
+    animation: active .5s ease-in;
+}
+.notActive{
+    color: var(--color-white);
+    animation: notActive .5s ease-out;
 }
 .logo__style{
     color: var(--color-orange);
@@ -343,7 +353,6 @@ html, body{
     /* HEADER STYLE */
     .site__navbar-menu{
         margin: 0 auto;
-        /* z-index: -1; */
     }
     .navbar__menu-logo{
         display: inline-block;
@@ -542,4 +551,13 @@ html, body{
         max-width: 575px;
         min-height: 220px;
     }
+}
+/* ANIMATIONS */
+@keyframes active{
+    0% {color: var(--color-white);}
+    100% {color: var(--color-orange);}
+}
+@keyframes notActive{
+    0% {color: var(--color-orange);}
+    100% {color: var(--color-white);}
 }
